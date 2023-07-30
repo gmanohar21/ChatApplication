@@ -12,7 +12,7 @@ public class MessageConfig implements WebSocketMessageBrokerConfigurer {
 
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
-		registry.addEndpoint("/server").withSockJS(); // It acts as server for connecting
+		registry.addEndpoint("/server").withSockJS();
 	}
 
 	@Override

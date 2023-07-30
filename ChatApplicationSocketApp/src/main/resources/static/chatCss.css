@@ -1,3 +1,83 @@
-#name-from{
-height: 100vh;
-}
+		body {
+			background-color: #f5f5dc;
+			/* Light beige background */
+			color: #333;
+			/* Dark gray text color */
+			font-family: Arial, sans-serif;
+			/* Use Arial font for text */
+			margin: 0;
+			/* Remove default margin to make full-width */
+		}
+
+		h1 {
+			color: #3498db;
+			/* Blue color for the title */
+			text-align: center;
+			margin-top: 120px;
+			font-size: 50px;
+			/* Adjust the font size to 36px */
+		}
+
+		.input-container {
+			display: flex;
+			justify-content: center;
+			/* Center the elements horizontally */
+			align-items: center;
+			/* Center the elements vertically */
+		}
+
+		input[type="text"] {
+			margin: 50px 15px;
+			/* Add margin between input and button */
+			padding: 10px;
+			border: 1px solid #27ae60;
+			/* Dark green border color */
+			border-radius: 5px;
+			/*flex: 1;  Allow the input to grow and fill the available space */
+			font-size: 16px;
+		}
+
+		#enter {
+			background-color: #27ae60;
+			/* Dark green background color */
+			color: #fff;
+			/* White text color */
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		#enter:hover {
+			background-color: #218c56;
+			/* Dark green color on hover */
+		}
+
+
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.custom-input {
+			width: 300px;
+			height: 40px;
+			margin-right: 10px;
+			/* Optional: Add some spacing between the input box and buttons */
+			padding: 10px;
+			border: 1px solid #27ae60;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+
+		.button-container button {
+			/* Set buttons to display as inline-block */
+			display: inline-block;
+			padding: 10px;
+			border: 1px solid #27ae60;
+			border-radius: 5px;
+			font-size: 16px;
+		}

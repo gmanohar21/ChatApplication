@@ -13,6 +13,7 @@ public class MessagingController {
 	@MessageMapping("/message")
 	@SendTo("/target/return") // the client who subscribes can get all messages
 	public Message getContent(@RequestBody Message msg) {
+		System.out.println(msg.toString());
 		return msg;
 	}
 
