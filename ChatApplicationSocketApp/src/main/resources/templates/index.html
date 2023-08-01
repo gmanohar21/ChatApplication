@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<title>Chat App</title>
 
-	<link rel="stylesheet" href="/chatCss.css">
-	
+	<link rel="stylesheet" th:href="@{/css/chatCss.css}"/>
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="/webjars/sockjs-client/sockjs.min.js"></script>
 	<script src="/webjars/stomp-websocket/stomp.min.js"></script>
-	<script src="/chatApp.js"></script>
-	
+	<script th:src="@{/js/chatApp.js}"></script>
+
 </head>
 
 <body>
@@ -18,12 +18,12 @@
 		<h1>Crazy Chat Bonanza! 🤪🎉</h1>
 		<div class="input-container">
 			<input type="text" id="name" placeholder="Please enter name">
-			<button id="enter" >Enter</button>
+			<button id="enter">Enter</button>
 			<p id="message" style="color: red;"></p>
 		</div>
 	</div>
 
-	
+
 </body>
 
 </html>

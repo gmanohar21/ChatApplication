@@ -3,7 +3,7 @@ $(document).ready(() => {
 		javaSynch();
 	$("#enter").click(() => {
 		loginUser();
-		window.location.href = 'chatScreen.html';
+		    window.location.href = '/chatScreen';
 	});
 
 	$("#send").on("click", () => {
