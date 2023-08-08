@@ -23,15 +23,21 @@ public class ChatAppController {
 	MemberRepository memberRepository;
 
 	@PostMapping("/chatScreen")
-	public ModelAndView chatScreen(HttpServletResponse response, HttpServletRequest request, HttpSession session,
+	public void chatScreen(
 			@RequestBody HashMap<String, Object> objRequest) throws ParseException {
 		boolean parseBoolean = Boolean.parseBoolean(objRequest.get("online").toString());
 		Member m=new Member();
 		m.setName(objRequest.get("name").toString());
 		m.setOnline(parseBoolean);
 		memberRepository.save(m);
-		return new ModelAndView("redirect:/chatScreen");
 	}
+	
+	@GetMapping("/chatScreenDisplay")
+	public ModelAndView chatScreenreturn() {
+		return new ModelAndView("chatScreen");
+	}
+	
+	
 	
 	@GetMapping("/chatNew")
 	public ModelAndView chatNew() {

@@ -14,7 +14,7 @@ $(document).ready(() => {
             contentType: 'application/json',
             success: function(response) {
                 // Handle success response
-                // window.location.href = '/chatScreen';
+                window.location.href = '/chatScreenDisplay';
                 console.log('Success:', response);
             },
             error: function(xhr, status, error) {
