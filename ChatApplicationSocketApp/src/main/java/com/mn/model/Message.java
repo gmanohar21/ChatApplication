@@ -1,20 +1,37 @@
 package com.mn.model;
 
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
 public class Message {
-	private String name;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	@ManyToOne
+	private Member sender;
 	private String content;
+	private Date timestamp;
 
-	public Message(String name, String content) {
-		this.name = name;
-		this.content = content;
+	public long getId() {
+		return id;
 	}
 
-	public String getName() {
-		return name;
+	public void setId(long id) {
+		this.id = id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public Member getSender() {
+		return sender;
+	}
+
+	public void setSender(Member sender) {
+		this.sender = sender;
 	}
 
 	public String getContent() {
@@ -23,6 +40,19 @@ public class Message {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public Date getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Date timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	@Override
+	public String toString() {
+		return "Message [id=" + id + ", sender=" + sender + ", content=" + content + ", timestamp=" + timestamp + "]";
 	}
 
 }

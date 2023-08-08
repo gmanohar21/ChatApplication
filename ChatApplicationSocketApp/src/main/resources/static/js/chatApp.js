@@ -3,7 +3,26 @@ $(document).ready(() => {
 		javaSynch();
 	$("#enter").click(() => {
 		loginUser();
-		    window.location.href = '/chatScreen';
+		var formData={
+			name:$("#name").val(),
+			online:true
+		}
+		    $.ajax({
+            url: '/chatScreen', // Replace with your server's endpoint
+            type: 'POST',
+            data: JSON.stringify(formData),
+            contentType: 'application/json',
+            success: function(response) {
+                // Handle success response
+                // window.location.href = '/chatScreen';
+                console.log('Success:', response);
+            },
+            error: function(xhr, status, error) {
+                // Handle error
+                console.log('Error:', status, error);
+            }
+        });
+		 //  
 	});
 
 	$("#send").on("click", () => {
