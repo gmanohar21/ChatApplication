@@ -34,7 +34,7 @@ public class ChatAppController {
 	
 	@GetMapping("/chatScreenDisplay")
 	public ModelAndView chatScreenreturn() {
-		return new ModelAndView("chatScreen");
+		return new ModelAndView("chatfile");
 	}
 	
 	

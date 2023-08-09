@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Desktop Chat App</title>
-    <link rel="stylesheet" th:href="@{/css/chatfilecss.css}" />
-</head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="add-box">
-                <input type="text" placeholder="Add User">
-                <button class="add-button">Add</button>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="chat-section">
-            <!-- Chat section content -->
-            <div class="chat-messages">
-                <!-- Chat messages will be displayed here -->
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Type your message">
-                <button>Send</button>
-            </div>
-        </div>
-    </div>
+<head>
+	<title>Desktop Chat App</title>
+	<link rel="stylesheet" th:href="@{/css/chatfilecss.css}" />
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="sidebar">
+			<div class="add-box">
+				<input type="text" placeholder="Add User">
+				<button class="add-button">Add</button>
+				<ul>
+					<div class="button"><a href="" accesskey="1" class="menubutton" target="_top" title="">Home</a>
+					</div>
+				</ul>
+			</div>
+		</div>
+
+		<div class="chat-section">
+			<!-- Chat section content -->
+			<div class="chat-messages">
+				<div class="message">
+					<div class="message-avatar">A</div>
+					<div class="message-content">
+						Hello! How are you?
+					</div>
+				</div>
+				<div class="message user-message">
+					<div class="message-content">
+						I'm doing great, thank you!
+					</div>
+					<div class="message-avatar">B</div>
+				</div>
+				<!-- More messages can be added here -->
+			</div>
+
+			<div class="chat-input">
+				<input type="text" placeholder="Type your message">
+				<button>Send</button>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
